@@ -18,7 +18,7 @@ function NewNavBar() {
 		<>
 			<Link to="/" style={classes.link}>
 				<Button
-					variant="contained"
+					variant="outlined"
 					startIcon={<HomeIcon />}
 					style={classes.buttonFirst}
 				>
@@ -27,7 +27,7 @@ function NewNavBar() {
 			</Link>
 			<Link to="/favorites" style={classes.link}>
 				<Button
-					variant="contained"
+					variant="outlined"
 					startIcon={<FavoriteIcon />}
 					style={classes.button}
 				>
@@ -41,7 +41,7 @@ function NewNavBar() {
 		<Container style={classes.mobileMenu}>
 			<Link to="/" style={classes.link}>
 				<Button
-					variant={isMobile ? "outlined" : "contained"}
+					variant="outlined"
 					startIcon={<HomeIcon />}
 					style={classes.buttonMobile}
 				>
@@ -50,7 +50,7 @@ function NewNavBar() {
 			</Link>
 			<Link to="/favorites" style={classes.link}>
 				<Button
-					variant={isMobile ? "outlined" : "contained"}
+					variant="outlined"
 					startIcon={<FavoriteIcon />}
 					style={classes.buttonMobile}
 				>
@@ -62,7 +62,7 @@ function NewNavBar() {
 
 	return (
 		<AppBar style={classes.navbar} position="absolute">
-			<Toolbar>
+			<Toolbar style={classes.toolbar}>
 				<Typography variant="h5" component="p" style={classes.title}>
 					The Cookbook Reference
 				</Typography>

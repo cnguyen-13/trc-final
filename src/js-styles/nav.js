@@ -4,24 +4,38 @@ const useNavStyles = () => ({
 		color: "white",
 		boxShadow: "none",
 	},
+
+	toolbar: {
+		padding: "2rem 2rem",
+	},
+
 	title: {
 		flexGrow: 1,
 	},
+
 	link: {
 		textDecoration: "none",
 	},
+
 	button: {
-		backgroundColor: "#210E0D",
+		color: "white",
+		borderColor: "white",
+		backgroundColor: "transparent",
 	},
+
 	buttonFirst: {
-		backgroundColor: "#210E0D",
+		color: "white",
+		borderColor: "white",
+		backgroundColor: "transparent",
 		marginRight: "1rem",
 	},
+
 	buttonMobile: {
 		borderColor: "#210E0D",
 		color: "#210E0D",
 		marginRight: "0rem",
 	},
+
 	mobileMenu: {
 		width: "100%",
 		height: "100vh",
@@ -35,6 +49,7 @@ const useNavStyles = () => ({
 		top: 57,
 		left: 0,
 	},
+
 	control: {
 		cursor: "pointer",
 	},

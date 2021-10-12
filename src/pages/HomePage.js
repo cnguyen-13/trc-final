@@ -22,7 +22,7 @@ function Home() {
 	return (
 		<>
 			<NewNavBar />
-			<Hero
+			<NewHero
 				query={query}
 				onChangeQuery={onChangeQuery}
 				onClickSubmit={onClickSubmit}
