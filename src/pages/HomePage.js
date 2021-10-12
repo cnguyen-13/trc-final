@@ -1,5 +1,6 @@
 import React from "react"
-import NavigationBar from "../components/nav-bar/NavigationBar"
+import NewNavBar from "../new-components/nav-bar/NavigationBar"
+import NewHero from "../new-components/hero/Hero"
 import Hero from "../components/hero/Hero"
 import Search from "../components/search-by/Search"
 import Recipes from "../components/recipe-card/Recipes"
@@ -20,7 +21,7 @@ function Home() {
 
 	return (
 		<>
-			<NavigationBar />
+			<NewNavBar />
 			<Hero
 				query={query}
 				onChangeQuery={onChangeQuery}
@@ -29,10 +30,10 @@ function Home() {
 				onClickReset={onClickReset}
 				filterSettings={filterSettings}
 			/>
-			<Search />
+			{/* <Search />
 			{recipes.length !== 0 ? (
 				<Recipes query={oldQuery} recipes={recipes} />
-			) : null}
+			) : null} */}
 		</>
 	)
 }
