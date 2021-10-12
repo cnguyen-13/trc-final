@@ -1,0 +1,119 @@
+.recipes {
+	@include flexBox(center, flex-start, row, wrap, 3rem);
+	@include shiftDownFromNavbar();
+	margin-bottom: 12rem;
+
+	&__card {
+		position: relative;
+		width: calc(min(90%, 360px));
+	}
+
+	&__foreground {
+		border: none;
+		transform: translate(0, 0);
+	}
+
+	&__background {
+		@include backgroundOrMask($color-primary, -1);
+	}
+
+	&__upper {
+		position: relative;
+	}
+
+	&__heart-container {
+		@include flexBox(center, center, row, nowrap, 0);
+		@include circle($size-heart-container);
+		@include absoluteTopRight();
+		transition: transform 0.3s ease-out;
+		background-color: $color-white;
+		margin: $recipe-card-spacing;
+		z-index: 1;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__heart {
+		cursor: pointer;
+		width: 60%;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: $height-recipe-image;
+		object-fit: cover;
+	}
+
+	&__text {
+		background-color: $color-white;
+		padding: $recipe-card-spacing;
+	}
+
+	&__header {
+		margin-bottom: $recipe-card-spacing;
+	}
+
+	&__title {
+		font-size: 1.25rem;
+		margin-bottom: $recipe-card-spacing / 3;
+	}
+
+	&__tags {
+		font-style: italic;
+		margin-bottom: $recipe-card-spacing;
+		font-size: 0.8rem;
+		opacity: 0.8;
+	}
+
+	&__divider {
+		border: none;
+		width: 25%;
+		border-top: 1px solid $color-primary;
+		opacity: 0.5;
+	}
+
+	&__body {
+		margin: $recipe-card-spacing 0 1rem 0;
+		font-size: 0.8rem;
+		opacity: 0.8;
+	}
+
+	&__footer {
+		@include flexBox(space-between, center, row, wrap-reverse, 1rem);
+	}
+
+	&__btn {
+		@include darkBgLightText();
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem 2rem;
+		transition: background-color 0.3s ease-out;
+
+		&:hover {
+			background-color: $color-cta;
+		}
+	}
+
+	&__ready-time {
+		@include flexBox(flex-start, center, row, nowrap, 0.5rem);
+	}
+
+	&__clock-icon {
+		width: 20px;
+	}
+
+	&__cook-time {
+		color: $color-primary;
+		font-size: 0.8rem;
+		font-style: italic;
+	}
+}
+
+@media (min-width: 1370px) {
+	.recipes {
+		justify-content: space-between;
+	}
+}

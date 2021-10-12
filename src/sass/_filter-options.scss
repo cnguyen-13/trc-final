@@ -1,0 +1,97 @@
+.filter {
+	width: 100%;
+	height: $height-filter-options;
+	padding: $page-padding;
+	background-color: $color-white;
+	position: absolute;
+	right: 0;
+	top: $height-navbar;
+	overflow-y: scroll;
+	transition: transform 0.3s ease-out;
+	transform: translateX(100%);
+	border: 1px solid $color-primary;
+	border-right: none;
+
+	&--active {
+		transform: translateX(0);
+	}
+
+	&__header {
+		@include flexBox(space-between, center, row, nowrap, 0);
+		margin-bottom: 2rem;
+	}
+
+	&__title {
+	}
+
+	&__controls {
+		@include flexBox(space-between, center, row, nowrap, 0);
+		gap: 2rem;
+	}
+
+	&__reset {
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__close {
+		cursor: pointer;
+		font-size: 1.25rem;
+	}
+
+	&__settings {
+	}
+
+	&__section {
+		margin-bottom: 1.5rem;
+	}
+
+	&__sub-title {
+	}
+
+	&__options {
+	}
+
+	&__option {
+	}
+
+	&__checkbox {
+	}
+
+	&__number {
+	}
+
+	&__label {
+		opacity: 0.8;
+		margin-right: 0.5rem;
+	}
+	&__input {
+		margin-right: 0.5rem;
+	}
+
+	&__drop-down {
+	}
+
+	&__drop-option {
+	}
+
+	&__nutrition {
+		margin-bottom: 0.75rem;
+	}
+
+	&__nutrition-title {
+	}
+
+	&__nutrition-input {
+	}
+}
+
+@media (min-width: $bp-desktop-larger) {
+	.filter {
+		padding: 3rem;
+		padding-right: $page-padding;
+		width: calc(50% - 50px);
+	}
+}

@@ -1,0 +1,81 @@
+.nav {
+	position: fixed;
+	width: 100%;
+	z-index: 10000;
+	background-color: $color-white;
+	height: $height-navbar;
+	padding: 0 $page-padding;
+	-webkit-box-shadow: 0px 5px 1px -7px $color-black,
+		5px 5px 15px 5px $color-black;
+	box-shadow: 0px 5px 1px -7px $color-black, 5px 5px 15px 5px $color-black;
+
+	&__content {
+		@include flexBox(space-between, center, row, nowrap, 0);
+		height: 100%;
+	}
+
+	&__links {
+		@include flexBox(flex-start, flex-end, column, nowrap, 2rem);
+
+		&--mobile {
+			width: $width-mobile-links;
+			background-color: $color-white;
+			height: 100vh;
+			position: fixed;
+			top: $height-navbar + 10px;
+			right: 0;
+			transform: translateX(100%);
+			padding: $page-padding;
+			border-top: 1px solid $color-primary;
+			border-left: 1px solid $color-primary;
+			transition: all 0.3s ease-out;
+		}
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+
+	&__link {
+		line-height: 1.5;
+		text-decoration: none;
+		transition: all 0.1s;
+		font-size: 1.2rem;
+		color: $color-primary;
+
+		&:visited {
+			color: $color-primary;
+		}
+
+		&:hover {
+			transform: scale(1.05);
+			text-decoration: underline;
+		}
+	}
+
+	&__control {
+		width: $size-nav-control;
+		cursor: pointer;
+	}
+}
+
+@media (min-width: $bp-tablet) {
+	.nav {
+		&__links {
+			&--mobile {
+				background-color: transparent;
+				position: static;
+				border: none;
+				width: auto;
+				height: auto;
+				flex-direction: row;
+				transform: translateX(0);
+				padding: 0;
+			}
+		}
+
+		&__control {
+			display: none;
+		}
+	}
+}

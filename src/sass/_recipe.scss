@@ -1,0 +1,90 @@
+.recipe {
+	@include shiftDownFromNavbar();
+	margin: 2rem $page-padding 10rem $page-padding;
+
+	&__figure {
+		padding-bottom: 2rem;
+		border-bottom: 1rem solid $color-primary;
+	}
+
+	&__image {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	&__caption {
+		margin-bottom: 1rem;
+	}
+
+	&__information {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2rem;
+	}
+
+	&__section {
+		margin-bottom: 1rem;
+	}
+
+	&__title {
+		line-height: 1.5;
+		margin-bottom: 1rem;
+		font-size: 1.75rem;
+	}
+
+	&__list {
+		list-style: none;
+	}
+
+	&__list-item {
+		margin-bottom: 1rem;
+	}
+
+	&__table {
+		width: 100%;
+		text-align: left;
+	}
+
+	&__table-section {
+		width: 100%;
+	}
+
+	&__table-row {
+		width: 100%;
+		display: flex;
+		border-bottom: 1px solid $color-primary;
+		padding: 0.25rem 0;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&__table-cell {
+		padding-right: 0.5rem;
+		flex: 1;
+	}
+
+	&__message {
+		padding: $page-padding;
+	}
+}
+
+@media (min-width: $bp-desktop-larger) {
+	.recipe {
+		display: flex;
+
+		&__figure {
+			width: 50%;
+			position: sticky;
+			top: $height-navbar + 25px;
+			margin-right: $page-padding;
+			align-self: flex-start;
+		}
+
+		&__information {
+			margin-top: 0;
+			width: 50%;
+		}
+	}
+}
