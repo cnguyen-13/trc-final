@@ -2,7 +2,7 @@ import React from "react"
 import NewNavBar from "../new-components/nav-bar/NavigationBar"
 import NewHero from "../new-components/hero/Hero"
 import Hero from "../components/hero/Hero"
-import Search from "../components/search-by/Search"
+import NewSearch from "../new-components/search-by/Search"
 import Recipes from "../components/recipe-card/Recipes"
 import useFetchRecipes from "../custom-hooks/useFetchRecipes"
 import useCreateLocalStorage from "../custom-hooks/useCreateLocalStorage"
@@ -30,10 +30,10 @@ function Home() {
 				onClickReset={onClickReset}
 				filterSettings={filterSettings}
 			/>
-			{/* <Search />
+			<NewSearch />
 			{recipes.length !== 0 ? (
 				<Recipes query={oldQuery} recipes={recipes} />
-			) : null} */}
+			) : null}
 		</>
 	)
 }

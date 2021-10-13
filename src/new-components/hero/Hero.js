@@ -4,6 +4,9 @@ import FilterOptions from "../filters/FilterOptions"
 import HeroBackground from "./hero-components/HeroBackground"
 import useHeroStyles from "../../js-styles/search-hero"
 import { Container, Typography, TextField, Button } from "@mui/material"
+import SettingsIcon from "@mui/icons-material/Settings"
+import SearchIcon from "@mui/icons-material/Search"
+import SettingsModalButton from "./hero-components/SettingsModalButton"
 
 function Hero({
 	query,
@@ -46,14 +49,23 @@ function Hero({
 	)
 }
 
-function NewHero() {
+function NewHero({
+	query,
+	onChangeQuery,
+	onClickSubmit,
+	onChangeFilter,
+	onClickReset,
+	nutritionalValues,
+	filterSettings,
+}) {
 	const classes = useHeroStyles
+
 	return (
 		<div style={classes.background}>
 			<Container style={classes.container}>
 				<Typography
 					style={classes.title}
-					variant="h1"
+					variant="h2"
 					component="h1"
 					textAlign="center"
 				>
@@ -71,14 +83,28 @@ function NewHero() {
 					nutritional needs and diets.
 				</Typography>
 
-				<Typography
-					style={classes.settings}
-					variant="body2"
-					component="p"
-					onClick={1}
-				>
-					Search Settings
-				</Typography>
+				<input
+					type="text"
+					style={classes.input}
+					onChange={onChangeQuery}
+					value={query}
+				/>
+
+				<div>
+					<SettingsModalButton
+						onChangeFilter={onChangeFilter}
+						onClickReset={onClickReset}
+						nutritionalValues={nutritionalValues}
+						filterSettings={filterSettings}
+					/>
+					<Button
+						variant="contained"
+						startIcon={<SearchIcon />}
+						onClick={onClickSubmit}
+					>
+						Search
+					</Button>
+				</div>
 			</Container>
 		</div>
 	)
