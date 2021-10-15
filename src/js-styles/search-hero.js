@@ -1,7 +1,7 @@
 const useHeroStyles = {
 	background: {
-		minHeight: 700,
-		height: "85vh",
+		minHeight: "85vh",
+		// height: "85vh",
 		color: "white",
 		display: "flex",
 		flexDirection: "column",
@@ -12,7 +12,7 @@ const useHeroStyles = {
 		backgroundPosition: "center",
 		backgroundAttachment: "fixed",
 		background:
-			"linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./cook1.jpg')",
+			"linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./cook.jpg')",
 	},
 
 	container: {

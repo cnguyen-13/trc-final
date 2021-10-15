@@ -1,10 +1,13 @@
 import React, { useState } from "react"
-import { Modal, Typography, Box, Button } from "@mui/material"
-import Dialog from "@mui/material/Dialog"
-import DialogActions from "@mui/material/DialogActions"
-import DialogContent from "@mui/material/DialogContent"
-import DialogContentText from "@mui/material/DialogContentText"
-import DialogTitle from "@mui/material/DialogTitle"
+import {
+	Button,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogContentText,
+	DialogTitle,
+} from "@mui/material"
+
 import SettingsIcon from "@mui/icons-material/Settings"
 import useHeroStyles from "../../../js-styles/search-hero"
 import FilterOptions from "../../filters/FilterOptions"
@@ -37,9 +40,10 @@ function SettingsModalButton({
 			>
 				Settings
 			</Button>
-			<Dialog open={isOpen} onClose={handleClose}>
+			<Dialog open={isOpen} onClose={handleClose} fullWidth>
 				<DialogTitle>Search Settings</DialogTitle>
 				<DialogActions>
+					<Button onClick={handleClose}>Close</Button>
 					<Button onClick={onClickReset}>Reset</Button>
 				</DialogActions>
 				<DialogContent>

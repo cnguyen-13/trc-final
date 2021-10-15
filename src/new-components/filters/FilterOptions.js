@@ -1,5 +1,4 @@
 import React from "react"
-import FilterHeader from "./FilterHeader"
 import CuisineOptions from "./categories/CuisineOptions"
 import IntoleranceOptions from "./categories/IntoleranceOptions"
 import NumberOptions from "./categories/NumberOptions"
@@ -10,7 +9,6 @@ import NutritionalOptions from "./categories/NutritionalOptions"
 function FilterOptions({ filterSettings, onChangeFilter, onClickReset }) {
 	return (
 		<section className="filter">
-			<FilterHeader onClickReset={onClickReset} />
 			<div className="filter__settings">
 				<CuisineOptions
 					onChangeFilter={onChangeFilter}

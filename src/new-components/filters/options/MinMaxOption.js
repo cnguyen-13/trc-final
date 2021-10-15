@@ -1,28 +1,47 @@
 import React from "react"
 import useMinMax from "../../../custom-hooks/useMinMax"
-import InputLabel from "./InputLabel"
+import NewInputLabel from "./InputLabel"
+import { Grid, Typography } from "@mui/material"
 
 function MinMaxOption({ data, category, onChangeFilter, idx }) {
 	const [name, minId, minValue, maxId, maxValue] = useMinMax(data)
 
 	return (
-		<div className="filter__nutrition">
-			<h4 className="filter__nutrition-title">{name}</h4>
-			<InputLabel
-				id={minId}
-				idx={idx}
-				onChangeFilter={onChangeFilter}
-				category={category}
-				value={minValue}
-			/>
-			<InputLabel
-				id={maxId}
-				idx={idx}
-				onChangeFilter={onChangeFilter}
-				category={category}
-				value={maxValue}
-			/>
-		</div>
+		<Grid
+			container
+			columns={{ xs: 11 }}
+			alignItems="center"
+			style={{ marginBottom: "0.5rem" }}
+		>
+			<Grid item xs={4} md={3}>
+				<Typography variant="body2" component="h4">
+					{name}
+				</Typography>
+			</Grid>
+			<Grid item xs={3} md={3}>
+				<NewInputLabel
+					id={minId}
+					idx={idx}
+					onChangeFilter={onChangeFilter}
+					category={category}
+					value={minValue}
+				/>
+			</Grid>
+			<Grid item xs={1} md={1}>
+				<Typography variant="body2" textAlign="center">
+					-
+				</Typography>
+			</Grid>
+			<Grid item xs={3} md={3}>
+				<NewInputLabel
+					id={maxId}
+					idx={idx}
+					onChangeFilter={onChangeFilter}
+					category={category}
+					value={maxValue}
+				/>
+			</Grid>
+		</Grid>
 	)
 }
 
