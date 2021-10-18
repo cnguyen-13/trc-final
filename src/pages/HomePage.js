@@ -7,6 +7,7 @@ import useFetchRecipes from "../custom-hooks/useFetchRecipes"
 import useCreateLocalStorage from "../custom-hooks/useCreateLocalStorage"
 import useFilter from "../custom-hooks/useFilter"
 import useQuery from "../custom-hooks/useQuery"
+import Footer from "../new-components/footer/Footer"
 
 function Home() {
 	useCreateLocalStorage()
@@ -33,6 +34,7 @@ function Home() {
 			{recipes.length !== 0 ? (
 				<NewRecipes query={oldQuery} recipes={recipes} />
 			) : null}
+			<Footer />
 		</>
 	)
 }
