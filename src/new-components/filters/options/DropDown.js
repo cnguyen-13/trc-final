@@ -1,22 +1,6 @@
 import React from "react"
 import NewDropDownOption from "./DropDownOption.js"
-import { Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material"
-
-function DropDown({ onChangeFilter, category, value, values }) {
-	const typeSelectComponents = values.map((diet, idx) => {
-		return <NewDropDownOption data={diet} key={`${diet}_${idx}`} />
-	})
-	return (
-		<select
-			className="filter__drop-down"
-			onChange={onChangeFilter}
-			data-category={category}
-			value={value}
-		>
-			{typeSelectComponents}
-		</select>
-	)
-}
+import { Select } from "@mui/material"
 
 function NewDropDown({ onChangeFilter, category, value, values }) {
 	const typeSelectComponents = values.map((diet, idx) => {

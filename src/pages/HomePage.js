@@ -1,9 +1,8 @@
 import React from "react"
 import NewNavBar from "../new-components/nav-bar/NavigationBar"
 import NewHero from "../new-components/hero/Hero"
-import Hero from "../components/hero/Hero"
 import NewSearch from "../new-components/search-by/Search"
-import Recipes from "../components/recipe-card/Recipes"
+import NewRecipes from "../new-components/recipe-card/Recipes"
 import useFetchRecipes from "../custom-hooks/useFetchRecipes"
 import useCreateLocalStorage from "../custom-hooks/useCreateLocalStorage"
 import useFilter from "../custom-hooks/useFilter"
@@ -32,7 +31,7 @@ function Home() {
 			/>
 			<NewSearch />
 			{recipes.length !== 0 ? (
-				<Recipes query={oldQuery} recipes={recipes} />
+				<NewRecipes query={oldQuery} recipes={recipes} />
 			) : null}
 		</>
 	)
