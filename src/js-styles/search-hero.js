@@ -1,4 +1,19 @@
 const useHeroStyles = {
+	favoritesBackground: {
+		minHeight: "85vh",
+		// height: "85vh",
+		color: "white",
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+		backgroundSize: "cover",
+		backgroundRepeat: "no-repeat",
+		backgroundPosition: "center",
+		backgroundAttachment: "fixed",
+		background:
+			"linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./cook1.jpg')",
+	},
 	background: {
 		minHeight: "85vh",
 		// height: "85vh",

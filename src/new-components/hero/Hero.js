@@ -56,9 +56,43 @@ function NewHero({
 	onClickReset,
 	nutritionalValues,
 	filterSettings,
+	isFavoritePage,
 }) {
 	const classes = useHeroStyles
+	if (isFavoritePage) {
+		return (
+			<div style={classes.favoritesBackground}>
+				<Container style={classes.container}>
+					<Typography
+						style={classes.title}
+						variant="h2"
+						component="h1"
+						textAlign="center"
+					>
+						The Cookbook Reference: Your Favorites!
+					</Typography>
 
+					<Typography
+						variant="body1"
+						component="p"
+						textAlign="center"
+						style={classes.text}
+					>
+						Review, rediscover, and savor your favorited recipes. All of
+						favorited recipes will be collected here.
+					</Typography>
+					<Typography
+						variant="h4"
+						component="p"
+						textAlign="center"
+						style={classes.text}
+					>
+						ENJOY!
+					</Typography>
+				</Container>
+			</div>
+		)
+	}
 	return (
 		<div style={classes.background}>
 			<Container style={classes.container}>

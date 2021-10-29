@@ -12,6 +12,61 @@ function Search({ isFavoritePage, isRecipePage }) {
 }
 
 function NewSearch({ isFavoritePage, isRecipePage }) {
+	if (isFavoritePage) {
+		return (
+			<Container style={{ padding: "4rem 0" }}>
+				<Typography variant="h2" gutterBottom textAlign="center">
+					You can...
+				</Typography>
+				<Grid
+					container
+					spacing={3}
+					direction="row"
+					justifyContent="center"
+					alignItems="center"
+				>
+					<Grid item xs={11} lg={4}>
+						<img
+							src={recipeImg}
+							alt="Recipe icon"
+							style={{ width: "8rem", display: "block", margin: "2rem auto" }}
+						/>
+						<Typography variant="h3" textAlign="center" gutterBottom>
+							Remove
+						</Typography>
+						<Typography
+							variant="body"
+							paragraph
+							textAlign="center"
+							gutterBottom
+						>
+							If a recipe doesn't seem good anymore, you can remove it by
+							'unhearting' it! You can always add it again in the future!
+						</Typography>
+					</Grid>
+					<Grid item xs={11} lg={4}>
+						<img
+							src={ingredientsImg}
+							alt="Ingredients icon"
+							style={{ width: "8rem", display: "block", margin: "2rem auto" }}
+						/>
+						<Typography variant="h3" textAlign="center" gutterBottom>
+							Review
+						</Typography>
+						<Typography
+							variant="body"
+							paragraph
+							textAlign="center"
+							gutterBottom
+						>
+							This page is a collection of all of the recipes you have 'hearted'
+							up until now, review your favorited recipes here!
+						</Typography>
+					</Grid>
+				</Grid>
+			</Container>
+		)
+	}
 	return (
 		<Container style={{ padding: "4rem 0" }}>
 			<Typography variant="h2" gutterBottom textAlign="center">
