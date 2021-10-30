@@ -4,10 +4,11 @@ import { useAsync } from "react-async"
 import NavigationBar from "../components/nav-bar/NavigationBar"
 import Hero from "../components/hero/Hero"
 import Search from "../components/search-by/Search"
-import RecipeDetails from "../components/recipe/RecipeDetails"
+import RecipeDetails from "../new-components/recipe/RecipeDetails"
 import { MINI_PAGES } from "../constants/recipe-messages"
 import { getSingleRecipe } from "../functions/get-single-recipe"
-
+import NewNavBar from "../new-components/nav-bar/NavigationBar"
+import Footer from "../new-components/footer/Footer"
 function RecipePage() {
 	const { recipeName } = useParams()
 	const { data, error, isPending } = useAsync({
@@ -21,10 +22,11 @@ function RecipePage() {
 		try {
 			return (
 				<>
-					<NavigationBar />
-					<Hero recipe={data} isRecipePage />
-					<Search isRecipePage />
+					<NewNavBar isRecipePage />
+					{/* <Hero recipe={data} isRecipePage /> */}
+					{/* <Search isRecipePage /> */}
 					<RecipeDetails recipe={data} />
+					<Footer />
 				</>
 			)
 		} catch (err) {

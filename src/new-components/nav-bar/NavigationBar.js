@@ -8,7 +8,7 @@ import useNavbar from "../../custom-hooks/useNavbar"
 import useViewPortWidth from "../../custom-hooks/viewport-width"
 import useNavStyles from "../../js-styles/nav"
 
-function NewNavBar() {
+function NewNavBar({ isRecipePage }) {
 	const width = useViewPortWidth()
 	const [isActive, toggleIsActive] = useNavbar()
 	const classes = useNavStyles()
