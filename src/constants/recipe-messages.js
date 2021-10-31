@@ -1,42 +1,55 @@
 import React from "react"
-import NavigationBar from "../components/nav-bar/NavigationBar"
+import NewNavBar from "../new-components/nav-bar/NavigationBar"
+import { Typography, Container } from "@mui/material"
 
 const MESSAGES = {
-	PENDING: <h1 className="recipe__message">Pending...</h1>,
-	ERROR: <h1 className="recipe__message">Error Getting Recipe Data...</h1>,
-	NONEXIST: <h1 className="recipe__message">Recipe Doesn't Exist...</h1>,
+	PENDING: (
+		<Typography variant="h3" component="h1">
+			Pending...
+		</Typography>
+	),
+	ERROR: (
+		<Typography variant="h3" component="h1">
+			Error Getting Recipe Data...
+		</Typography>
+	),
+	NONEXIST: (
+		<Typography variant="h3" component="h1">
+			Recipe Doesn't Exist...
+		</Typography>
+	),
 	NOTHING: (
-		<h1 className="recipe__message">
+		<Typography variant="h3" component="h1">
 			Error Fetching Recipe Data, Check Recipe Name...
-		</h1>
+		</Typography>
 	),
 }
 
 export const MINI_PAGES = {
 	PENDING: (
-		<div>
-			<NavigationBar />
+		<Container>
+			<NewNavBar isRecipePage />
 			{MESSAGES.PENDING}
-		</div>
+		</Container>
 	),
 
 	ERROR: (
-		<div>
-			<NavigationBar />
+		<Container>
+			<NewNavBar isRecipePage />
 			{MESSAGES.ERROR}
-		</div>
+		</Container>
 	),
 
 	NONEXIST: (
-		<div>
-			<NavigationBar />
+		<Container>
+			<NewNavBar isRecipePage />
 			{MESSAGES.NONEXIST}
-		</div>
+		</Container>
 	),
 	NOTHING: (
-		<div>
-			<NavigationBar />
+		<Container>
+			<NewNavBar isRecipePage />
 			{MESSAGES.NOTHING}
-		</div>
+		</Container>
 	),
 }

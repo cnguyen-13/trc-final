@@ -1,13 +1,10 @@
 import React from "react"
-import SectionTitle from "./common-components/SectionTitle"
-// import Table from './common-components/Table'
 import {
 	Table,
 	TableHead,
 	TableBody,
 	TableRow,
 	TableCell,
-	Paper,
 	Typography,
 	TableContainer,
 } from "@mui/material"

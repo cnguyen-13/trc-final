@@ -18,18 +18,18 @@ function NewNavBar({ isRecipePage }) {
 		<>
 			<Link to="/" style={classes.link}>
 				<Button
-					variant="outlined"
+					variant={isRecipePage ? "contained" : "outlined"}
 					startIcon={<HomeIcon />}
-					style={classes.buttonFirst}
+					style={isRecipePage ? { marginRight: "1rem" } : classes.buttonFirst}
 				>
 					Home
 				</Button>
 			</Link>
 			<Link to="/favorites" style={classes.link}>
 				<Button
-					variant="outlined"
+					variant={isRecipePage ? "contained" : "outlined"}
 					startIcon={<FavoriteIcon />}
-					style={classes.button}
+					style={isRecipePage ? null : classes.button}
 				>
 					Favorites
 				</Button>
@@ -61,7 +61,14 @@ function NewNavBar({ isRecipePage }) {
 	)
 
 	return (
-		<AppBar style={classes.navbar} position="absolute">
+		<AppBar
+			style={
+				isRecipePage
+					? { color: "black", backgroundColor: "white", height: 75 }
+					: classes.navbar
+			}
+			position={isRecipePage ? "fixed" : "absolute"}
+		>
 			<Toolbar style={classes.toolbar}>
 				<Typography variant="h5" component="p" style={classes.title}>
 					The Cookbook Reference

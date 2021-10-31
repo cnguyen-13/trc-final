@@ -3,17 +3,24 @@ import useHTMLParser from "../../custom-hooks/useHTMLParser"
 import useLargerImage from "../../custom-hooks/useLargerImage"
 import { Typography, Grid, Container } from "@mui/material"
 import Nutrition from "./recipe-components/Nutrition"
+import { commaList } from "../../functions/comma-list"
 
 function RecipeDetails({ recipe }) {
 	const parsedText = useHTMLParser(recipe.summary)
 	const [source, title] = useLargerImage(recipe)
 
 	return (
-		<Container style={{ position: "relative", top: 100 }}>
+		<Container style={{ marginTop: 150 }}>
 			<Grid container spacing={5}>
 				<Grid item xs={12} md={6} lg={6}>
-					<Typography variant="h3" gutterBottom component="h1">
+					<Typography variant="h3" component="h1">
 						{recipe.title}
+					</Typography>
+					<Typography
+						variant="body1"
+						style={{ fontStyle: "italic", marginBottom: "1rem" }}
+					>
+						{commaList(recipe.dishTypes)}
 					</Typography>
 					<Typography variant="body2">{parsedText}</Typography>
 				</Grid>

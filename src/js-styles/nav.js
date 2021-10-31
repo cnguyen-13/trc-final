@@ -3,6 +3,7 @@ const useNavStyles = () => ({
 		backgroundColor: "transparent",
 		color: "white",
 		boxShadow: "none",
+		height: 75,
 	},
 
 	toolbar: {
