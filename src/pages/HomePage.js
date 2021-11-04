@@ -1,13 +1,13 @@
 import React from "react"
-import NewNavBar from "../new-components/nav-bar/NavigationBar"
-import NewHero from "../new-components/hero/Hero"
-import NewSearch from "../new-components/search-by/Search"
-import NewRecipes from "../new-components/recipe-card/Recipes"
-import useFetchRecipes from "../custom-hooks/useFetchRecipes"
-import useCreateLocalStorage from "../custom-hooks/useCreateLocalStorage"
-import useFilter from "../custom-hooks/useFilter"
-import useQuery from "../custom-hooks/useQuery"
-import Footer from "../new-components/footer/Footer"
+import NavBar from "../components/nav-bar/NavBar"
+import Hero from "../components/hero/Hero"
+import Search from "../components/search-by/Search"
+import Recipes from "../components/recipe-card/Recipes"
+import useFetchRecipes from "../hooks/useFetchRecipes"
+import useCreateLocalStorage from "../hooks/useCreateLocalStorage"
+import useFilter from "../hooks/useFilter"
+import useQuery from "../hooks/useQuery"
+import Footer from "../components/footer/Footer"
 
 function Home() {
 	useCreateLocalStorage()
@@ -21,8 +21,8 @@ function Home() {
 
 	return (
 		<>
-			<NewNavBar />
-			<NewHero
+			<NavBar />
+			<Hero
 				query={query}
 				onChangeQuery={onChangeQuery}
 				onClickSubmit={onClickSubmit}
@@ -30,9 +30,9 @@ function Home() {
 				onClickReset={onClickReset}
 				filterSettings={filterSettings}
 			/>
-			<NewSearch />
+			<Search />
 			{recipes.length !== 0 ? (
-				<NewRecipes query={oldQuery} recipes={recipes} />
+				<Recipes query={oldQuery} recipes={recipes} />
 			) : null}
 			<Footer />
 		</>

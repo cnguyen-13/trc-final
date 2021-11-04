@@ -1,16 +1,20 @@
 import React from "react"
-import ForegroundCard from "./recipe-card-components/ForegroundCard"
-import BackgroundCard from "./recipe-card-components/BackgroundCard"
-import useRecipeCardAnimation from "../../custom-hooks/useRecipeCardAnimation"
+import { Grid, Card } from "@mui/material"
+import RecipeImage from "./recipe-card-components/RecipeImage"
+import Heart from "./recipe-card-components/Heart"
+import Content from "./recipe-card-components/Content"
+import Footer from "./recipe-card-components/Footer"
 
 function RecipeCard({ recipe }) {
-	const { card, foreground, background } = useRecipeCardAnimation()
-
 	return (
-		<div className="recipes__card" ref={card}>
-			<ForegroundCard innerRef={foreground} recipe={recipe} />
-			<BackgroundCard innerRef={background} />
-		</div>
+		<Grid item xs={12} sm={6} lg={4}>
+			<Card style={{ position: "relative" }}>
+				<RecipeImage recipe={recipe} />
+				<Heart recipe={recipe} />
+				<Content recipe={recipe} />
+				<Footer recipe={recipe} />
+			</Card>
+		</Grid>
 	)
 }
 

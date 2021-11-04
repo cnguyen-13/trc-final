@@ -1,22 +1,19 @@
 import React from "react"
-import NavigationBar from "../components/nav-bar/NavigationBar"
-import Recipes from "../new-components/recipe-card/Recipes"
+import Recipes from "../components/recipe-card/Recipes"
+import useFavorites from "../hooks/useFavorites"
+import NavBar from "../components/nav-bar/NavBar"
 import Hero from "../components/hero/Hero"
 import Search from "../components/search-by/Search"
-import useFavorites from "../custom-hooks/useFavorites"
-import NewNavBar from "../new-components/nav-bar/NavigationBar"
-import NewHero from "../new-components/hero/Hero"
-import NewSearch from "../new-components/search-by/Search"
-import Footer from "../new-components/footer/Footer"
+import Footer from "../components/footer/Footer"
 
 function Favorites() {
 	const favorites = useFavorites()
 
 	return (
 		<>
-			<NewNavBar />
-			<NewHero isFavoritePage />
-			<NewSearch isFavoritePage />
+			<NavBar />
+			<Hero isFavoritePage />
+			<Search isFavoritePage />
 			<Recipes query="Favorite" recipes={favorites} />
 			<Footer />
 		</>

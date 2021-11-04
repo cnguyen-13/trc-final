@@ -1,9 +1,10 @@
 import React from "react"
 import { CATEGORIES } from "../../../constants/filter-categories"
 import CheckboxOption from "../options/CheckboxOption"
-import useFilterOptions from "../../../custom-hooks/useFilterOptions"
+import useFilterOptions from "../../../hooks/useFilterOptions"
 import FilterSectionTitle from "./category-components/FilterSectionTitle"
 import { FILTER_SECTION_TITLES } from "../../../constants/filter-section-titles"
+import { FormGroup } from "@mui/material"
 
 function IntoleranceOptions({ filterSettings, onChangeFilter }) {
 	const values = useFilterOptions(CATEGORIES.INTOLERANCES)
@@ -24,7 +25,7 @@ function IntoleranceOptions({ filterSettings, onChangeFilter }) {
 	return (
 		<section className="filter__section">
 			<FilterSectionTitle title={FILTER_SECTION_TITLES.INTOLERANCES} />
-			<div className="filter__options">{intoleranceOptionComponents}</div>
+			<FormGroup>{intoleranceOptionComponents}</FormGroup>
 		</section>
 	)
 }

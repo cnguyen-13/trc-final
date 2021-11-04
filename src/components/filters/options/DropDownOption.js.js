@@ -1,7 +1,7 @@
 import React from "react"
 
 function DropDownOption({ data }) {
-	return <option className="filter__drop-option">{data}</option>
+	return <option value={data}>{data}</option>
 }
 
 export default DropDownOption

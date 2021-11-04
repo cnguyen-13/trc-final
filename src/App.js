@@ -3,8 +3,7 @@ import { Switch, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import FavoritesPage from "./pages/FavoritesPage"
 import RecipePage from "./pages/RecipePage"
-import useScrollToTop from "./custom-hooks/useScrollToTop"
-import "./styles/styles.min.css"
+import useScrollToTop from "./hooks/useScrollToTop"
 
 function App() {
 	useScrollToTop()

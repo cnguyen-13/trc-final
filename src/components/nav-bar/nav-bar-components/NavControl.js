@@ -1,16 +1,17 @@
 import React from "react"
-import hamburger from "../../../images/nav/hamburger.svg"
-import cancel from "../../../images/nav/cancel.svg"
+import MenuIcon from "@mui/icons-material/Menu"
+import CloseIcon from "@mui/icons-material/Close"
+import useNavStyles from "../../../js-styles/nav"
 
-function NavControl({ isActive, toggleIsActive }) {
-	return (
-		<img
-			className="nav__control"
-			src={isActive ? cancel : hamburger}
-			alt={isActive ? "close menu" : "hamburger menu"}
-			onClick={toggleIsActive}
-		/>
+function NavControl({ isMobile, isActive, toggleIsActive }) {
+	const classes = useNavStyles
+	const icon = isActive ? (
+		<CloseIcon styles={classes.control} />
+	) : (
+		<MenuIcon styles={classes.control} />
 	)
+
+	return isMobile ? <div onClick={toggleIsActive}>{icon}</div> : null
 }
 
 export default NavControl

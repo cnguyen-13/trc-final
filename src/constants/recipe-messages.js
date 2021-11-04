@@ -1,5 +1,5 @@
 import React from "react"
-import NewNavBar from "../new-components/nav-bar/NavigationBar"
+import NavBar from "../components/nav-bar/NavBar"
 import { Typography, Container } from "@mui/material"
 
 const MESSAGES = {
@@ -27,29 +27,29 @@ const MESSAGES = {
 
 export const MINI_PAGES = {
 	PENDING: (
-		<Container>
-			<NewNavBar isRecipePage />
-			{MESSAGES.PENDING}
-		</Container>
+		<>
+			<NavBar isRecipePage />
+			<Container style={{ marginTop: 150 }}>{MESSAGES.PENDING}</Container>
+		</>
 	),
 
 	ERROR: (
-		<Container>
-			<NewNavBar isRecipePage />
-			{MESSAGES.ERROR}
-		</Container>
+		<>
+			<NavBar isRecipePage />
+			<Container style={{ marginTop: 150 }}>{MESSAGES.ERROR}</Container>
+		</>
 	),
 
 	NONEXIST: (
-		<Container>
-			<NewNavBar isRecipePage />
-			{MESSAGES.NONEXIST}
-		</Container>
+		<>
+			<NavBar isRecipePage />
+			<Container style={{ marginTop: 150 }}>{MESSAGES.NONEXIST}</Container>
+		</>
 	),
 	NOTHING: (
-		<Container>
-			<NewNavBar isRecipePage />
-			{MESSAGES.NOTHING}
-		</Container>
+		<>
+			<NavBar isRecipePage />
+			<Container style={{ marginTop: 150 }}>{MESSAGES.NOTHING}</Container>
+		</>
 	),
 }

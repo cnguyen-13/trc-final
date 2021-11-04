@@ -1,19 +1,27 @@
-import React from 'react'
-import SectionTitle from './common-components/SectionTitle'
-import List from './common-components/List'
-import ListItem from './common-components/ListItem'
+import React from "react"
+import { Grid, Typography } from "@mui/material"
 
 function Instructions({ analyzedInstructions }) {
-  const steps = analyzedInstructions[0].steps.map(({ number, step }) => {
-    return <ListItem key={number} data={`${number}. ${step}`} />
-  })
+	const instructions = analyzedInstructions[0].steps.map(({ number, step }) => {
+		return (
+			<li key={number}>
+				<Typography variant="body2" gutterBottom>
+					{`${number}. ${step}`}
+				</Typography>
+			</li>
+		)
+	})
 
-  return (
-    <section className="recipe__section">
-      <SectionTitle type="INSTRUCTIONS" />
-      <List type="ordered" items={steps} />
-    </section>
-  )
+	const instructionsList = <ol style={{ listStyle: "none" }}>{instructions}</ol>
+
+	return (
+		<Grid item xs={12} md={6}>
+			<Typography variant="h4" component="h2" gutterBottom>
+				Instructions
+			</Typography>
+			{instructionsList}
+		</Grid>
+	)
 }
 
 export default Instructions

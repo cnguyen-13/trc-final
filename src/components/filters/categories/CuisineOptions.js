@@ -1,9 +1,10 @@
 import React from "react"
 import { CATEGORIES } from "../../../constants/filter-categories"
 import CheckboxOption from "../options/CheckboxOption"
-import useFilterOptions from "../../../custom-hooks/useFilterOptions"
+import useFilterOptions from "../../../hooks/useFilterOptions"
 import FilterSectionTitle from "./category-components/FilterSectionTitle"
 import { FILTER_SECTION_TITLES } from "../../../constants/filter-section-titles"
+import { FormGroup } from "@mui/material"
 
 function CuisineOptions({ filterSettings, onChangeFilter }) {
 	const values = useFilterOptions(CATEGORIES.CUISINES)
@@ -24,7 +25,7 @@ function CuisineOptions({ filterSettings, onChangeFilter }) {
 	return (
 		<section className="filter__section">
 			<FilterSectionTitle title={FILTER_SECTION_TITLES.CUISINE} />
-			<div className="filter__options">{cuisineOptionComponents}</div>
+			<FormGroup>{cuisineOptionComponents}</FormGroup>
 		</section>
 	)
 }

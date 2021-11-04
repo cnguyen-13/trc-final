@@ -1,19 +1,27 @@
-import React from 'react'
-import SectionTitle from './common-components/SectionTitle'
-import List from './common-components/List'
-import ListItem from './common-components/ListItem'
+import React from "react"
+import { Grid, Typography } from "@mui/material"
 
 function Ingredients({ extendedIngredients }) {
-  const ingredients = extendedIngredients.map((ingredient) => (
-    <ListItem key={ingredient.original} data={`• ${ingredient.original}`} />
-  ))
+	const ingredients = extendedIngredients.map(ingredient => {
+		return (
+			<li key={ingredient.original}>
+				<Typography variant="body2" gutterBottom>
+					{`• ${ingredient.original}`}
+				</Typography>
+			</li>
+		)
+	})
 
-  return (
-    <section className="recipe__section">
-      <SectionTitle type="INGREDIENTS" />
-      <List type="unordered" items={ingredients} />
-    </section>
-  )
+	const ingredientsList = <ul style={{ listStyle: "none" }}>{ingredients}</ul>
+
+	return (
+		<Grid item xs={12} md={6}>
+			<Typography variant="h4" component="h2" gutterBottom>
+				Ingredients
+			</Typography>
+			{ingredientsList}
+		</Grid>
+	)
 }
 
 export default Ingredients
