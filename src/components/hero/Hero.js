@@ -24,6 +24,7 @@ function Hero({
 						variant="h2"
 						component="h1"
 						textAlign="center"
+						gutterBottom
 					>
 						The Cookbook Reference: Your Favorites!
 					</Typography>
@@ -34,16 +35,9 @@ function Hero({
 						textAlign="center"
 						style={classes.text}
 					>
-						Review, rediscover, and savor your favorited recipes. All of
-						favorited recipes will be collected here.
-					</Typography>
-					<Typography
-						variant="h4"
-						component="p"
-						textAlign="center"
-						style={classes.text}
-					>
-						ENJOY!
+						Review, rediscover, and savor your favorited recipes. All of the
+						recipes you favorited will be saved here. Add and remove recipes
+						based on your current wants and needs.
 					</Typography>
 				</Container>
 			</div>
