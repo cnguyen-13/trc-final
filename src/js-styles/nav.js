@@ -24,13 +24,6 @@ const useNavStyles = () => ({
 		backgroundColor: "transparent",
 	},
 
-	buttonFirst: {
-		color: "white",
-		borderColor: "white",
-		backgroundColor: "transparent",
-		marginRight: "1rem",
-	},
-
 	buttonMobile: {
 		borderColor: "#210E0D",
 		color: "#210E0D",

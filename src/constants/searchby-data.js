@@ -1,6 +1,8 @@
 import recipeImg from "../images/search/recipe.svg"
 import nutritionImg from "../images/search/nutrition.svg"
 import ingredientsImg from "../images/search/ingredients.svg"
+import removeImg from "../images/favorites/remove.svg"
+import reviewImg from "../images/favorites/heart.svg"
 
 export const SEARCH_BY_DATA = [
 	{
@@ -22,12 +24,12 @@ export const SEARCH_BY_DATA = [
 
 export const SEARCH_BY_FAVORITES = [
 	{
-		ICON: recipeImg,
+		ICON: removeImg,
 		TITLE: "Remove",
 		TEXT: "If a recipe doesn't seem good anymore, you can remove it by 'unhearting' it! You can always add it again in the future!",
 	},
 	{
-		ICON: ingredientsImg,
+		ICON: reviewImg,
 		TITLE: "Review",
 		TEXT: "This page is a collection of all of the recipes you have 'hearted' up until now, review your favorited recipes here!",
 	},
