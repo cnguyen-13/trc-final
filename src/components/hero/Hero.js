@@ -1,6 +1,6 @@
 import React from "react"
 import useHeroStyles from "../../js-styles/search-hero"
-import { Container, Typography, Button } from "@mui/material"
+import { Container, Typography, Button, ButtonGroup } from "@mui/material"
 import SearchIcon from "@mui/icons-material/Search"
 import SettingsModalButton from "./hero-components/SettingsModalButton"
 
@@ -57,6 +57,7 @@ function Hero({
 					variant="h2"
 					component="h1"
 					textAlign="center"
+					gutterBottom
 				>
 					The Cookbook Reference
 				</Typography>
@@ -66,6 +67,7 @@ function Hero({
 					component="p"
 					textAlign="center"
 					style={classes.text}
+					gutterBottom
 				>
 					Find new and delicious recipes to fill your desires! Search through an
 					extensive list ranging many cuisines. Filter results to meet your
@@ -88,6 +90,8 @@ function Hero({
 					/>
 					<Button
 						variant="contained"
+						size="large"
+						style={{ backgroundColor: "#FF415B" }}
 						startIcon={<SearchIcon />}
 						onClick={onClickSubmit}
 					>

@@ -27,7 +27,8 @@ function SettingsModalButton({ onChangeFilter, onClickReset, filterSettings }) {
 		<>
 			<Button
 				style={classes.settingBtn}
-				variant="outlined"
+				variant="contained"
+				size="large"
 				startIcon={<SettingsIcon />}
 				onClick={handleOpen}
 			>

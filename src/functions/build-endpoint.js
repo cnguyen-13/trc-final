@@ -20,5 +20,6 @@ export function buildEndpoint(query, settings = {}) {
 		else endPoint += addEndpointNutrition(data)
 	}
 
+	console.log(noSpaces(endPoint))
 	return noSpaces(endPoint)
 }

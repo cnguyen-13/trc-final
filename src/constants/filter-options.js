@@ -62,7 +62,7 @@ const NUMBER = {
 	TITLE: "Number",
 	CATEGORY: CATEGORIES.NUMBER,
 	PARAMETER: "&number=",
-	VALUES: 8,
+	VALUES: 9,
 }
 
 export const DEFAULT_SETTINGS = {
@@ -87,7 +87,7 @@ export const DEFAULT_SETTINGS = {
 	},
 	[CATEGORIES.NUMBER]: {
 		parameter: NUMBER.PARAMETER,
-		value: "8",
+		value: "9",
 	},
 }
 

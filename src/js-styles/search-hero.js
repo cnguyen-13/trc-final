@@ -1,6 +1,6 @@
 const useHeroStyles = {
 	favoritesBackground: {
-		minHeight: "85vh",
+		minHeight: "100vh",
 		// height: "85vh",
 		color: "white",
 		display: "flex",
@@ -11,12 +11,11 @@ const useHeroStyles = {
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center",
 		backgroundAttachment: "fixed",
-		background:
-			"linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./cook1.jpg')",
+		backgroundImage:
+			"linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./cook5.jpg')",
 	},
 	background: {
-		minHeight: "85vh",
-		// height: "85vh",
+		minHeight: "100vh",
 		color: "white",
 		display: "flex",
 		flexDirection: "column",
@@ -26,8 +25,8 @@ const useHeroStyles = {
 		backgroundRepeat: "no-repeat",
 		backgroundPosition: "center",
 		backgroundAttachment: "fixed",
-		background:
-			"linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./cook.jpg')",
+		backgroundImage:
+			"linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./cook2.jpg')",
 	},
 
 	container: {
@@ -35,11 +34,10 @@ const useHeroStyles = {
 		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",
-		gap: "2.5rem",
+		gap: "1rem",
 	},
 
 	title: {
-		paddingBottom: "1rem",
 		fontWeight: 100,
 		fontStyle: "italic",
 	},
@@ -51,10 +49,11 @@ const useHeroStyles = {
 
 	input: {
 		border: "1px solid white",
+		textAlign: "center",
 		backgroundColor: "transparent",
 		color: "white",
 		width: "45%",
-		borderRadius: "0.25rem",
+		borderRadius: "0.3rem",
 		padding: "0.75rem 1.25rem",
 	},
 

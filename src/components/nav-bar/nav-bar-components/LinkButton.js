@@ -14,7 +14,7 @@ function LinkButton({ link, icon, text, isFirst, isRecipePage }) {
 	return (
 		<Link to={`/${link}`} style={classes.link}>
 			<Button
-				variant={isRecipePage ? "contained" : "outlined"}
+				variant="contained"
 				startIcon={icon}
 				style={
 					isRecipePage ? (isFirst ? { marginRight: "1rem" } : null) : styles
