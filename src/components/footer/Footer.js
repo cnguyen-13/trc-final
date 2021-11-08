@@ -1,14 +1,15 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { AppBar, Toolbar, Typography } from "@mui/material"
+import GitHubLogo from "../../images/github.svg"
 
 function Footer() {
 	return (
 		<AppBar
+			color="primary"
 			style={{
 				position: "static",
-				backgroundColor: "rgba(0, 0, 0)",
-				padding: "1rem",
+				padding: "0.75rem",
 			}}
 		>
 			<Toolbar
@@ -18,7 +19,34 @@ function Footer() {
 					flexDirection: "column",
 				}}
 			>
-				<Typography variant="h5" gutterBottom>
+				<Typography variant="h6" gutterBottom>
+					The Cookbook Reference
+				</Typography>
+
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						gap: "0.5rem",
+					}}
+				>
+					<Typography variant="body1" gutterBottom>
+						<Link to="/" style={{ color: "white", textDecoration: "none" }}>
+							Home
+						</Link>
+					</Typography>
+					<Typography variant="body1" gutterBottom>
+						<Link
+							to="/favorites"
+							style={{ color: "white", textDecoration: "none" }}
+						>
+							Favorites
+						</Link>
+					</Typography>
+				</div>
+
+				<Typography variant="body1" gutterBottom>
 					<Link
 						to={{ pathname: "https://spoonacular.com/food-api" }}
 						target="_blank"
@@ -27,15 +55,13 @@ function Footer() {
 						Spoonacular API
 					</Link>
 				</Typography>
-				<Typography variant="h5" gutterBottom>
-					<Link
-						to={{ pathname: "https://github.com/cnguyen-13/TRC-Remake" }}
-						target="_blank"
-						style={{ color: "white", textDecoration: "none" }}
-					>
-						GitHub
-					</Link>
-				</Typography>
+
+				<Link
+					to={{ pathname: "https://github.com/cnguyen-13/TRC-Remake" }}
+					target="_blank"
+				>
+					<img src={GitHubLogo} alt="github link" />
+				</Link>
 			</Toolbar>
 		</AppBar>
 	)

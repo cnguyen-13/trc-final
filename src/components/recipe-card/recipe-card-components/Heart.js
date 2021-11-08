@@ -9,7 +9,7 @@ function Heart({ recipe }) {
 		position: "absolute",
 		top: "1rem",
 		right: "1rem",
-		color: isFavorited ? "#F75151" : null,
+		color: isFavorited ? "#D82315" : null,
 	}
 
 	return isFavorited ? (

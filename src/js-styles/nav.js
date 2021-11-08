@@ -20,9 +20,6 @@ const useNavStyles = () => ({
 
 	button: {
 		color: "white",
-		//borderColor: "white",
-		//backgroundColor: "transparent",
-		backgroundColor: "#64AA71",
 	},
 
 	buttonMobile: {

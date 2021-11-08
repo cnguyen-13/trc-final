@@ -11,7 +11,10 @@ function ViewRecipeButton({ recipe }) {
 			to={`recipe/${hypenateTitle(title)}`}
 			style={{ textDecoration: "none" }}
 		>
-			<Button variant="contained" style={{ textDecoration: "none" }}>
+			<Button
+				variant="contained"
+				style={{ backgroundColor: "#FF415B", textDecoration: "none" }}
+			>
 				View Recipe!
 			</Button>
 		</Link>
