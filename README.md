@@ -24,9 +24,9 @@ can be viewed (on page and original external page) and "liked" for future refere
 ## Tech Used
 
 - HTML
-- CSS/SASS (BEM Naming Convention)
+- CSS
 - JavaScript (ES6+)
 - API
-- GSAP (Animation)
+- Material UI
 - ReactJS (React Router Dom, Hooks, ContextAPI, Custom Hooks)
 - Figma (For design / UI Planning)
